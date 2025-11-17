@@ -84,11 +84,11 @@ private static void deallocate(String processName){
 for(MemoryBlock block: memory){
 if(!block.isFree() &&block.processName.equals(processName)){
 block.processName = null;
-System.out.printf("Release -> success, processName");
+System.out.printf("RELEASE %s -> SUCCESS\n, processName");
 return;
 }	
 }
-System.out.printf("RELEASE -> FAILED", processName);
+System.out.printf("RELEASE %s -> FAILED", processName);
 }
     public static void displayStatistics() {
         System.out.println("\n========================================");
